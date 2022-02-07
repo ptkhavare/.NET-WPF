@@ -1,0 +1,63 @@
+C:\Users\prana\source\repos\Assignment_1\Assignment_1\bin\Debug\net6.0-windows\Assignment_1.exe
+C:\Users\prana\source\repos\Assignment_1\Assignment_1\bin\Debug\net6.0-windows\Assignment_1.deps.json
+C:\Users\prana\source\repos\Assignment_1\Assignment_1\bin\Debug\net6.0-windows\Assignment_1.runtimeconfig.json
+C:\Users\prana\source\repos\Assignment_1\Assignment_1\bin\Debug\net6.0-windows\Assignment_1.dll
+C:\Users\prana\source\repos\Assignment_1\Assignment_1\bin\Debug\net6.0-windows\ref\Assignment_1.dll
+C:\Users\prana\source\repos\Assignment_1\Assignment_1\bin\Debug\net6.0-windows\Assignment_1.pdb
+C:\Users\prana\source\repos\Assignment_1\Assignment_1\obj\Debug\net6.0-windows\Assignment_1.csproj.AssemblyReference.cache
+C:\Users\prana\source\repos\Assignment_1\Assignment_1\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Users\prana\source\repos\Assignment_1\Assignment_1\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\prana\source\repos\Assignment_1\Assignment_1\obj\Debug\net6.0-windows\Assignment_1_MarkupCompile.cache
+C:\Users\prana\source\repos\Assignment_1\Assignment_1\obj\Debug\net6.0-windows\Assignment_1_MarkupCompile.lref
+C:\Users\prana\source\repos\Assignment_1\Assignment_1\obj\Debug\net6.0-windows\MainWindow.baml
+C:\Users\prana\source\repos\Assignment_1\Assignment_1\obj\Debug\net6.0-windows\Assignment_1.g.resources
+C:\Users\prana\source\repos\Assignment_1\Assignment_1\obj\Debug\net6.0-windows\Assignment_1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\prana\source\repos\Assignment_1\Assignment_1\obj\Debug\net6.0-windows\Assignment_1.AssemblyInfoInputs.cache
+C:\Users\prana\source\repos\Assignment_1\Assignment_1\obj\Debug\net6.0-windows\Assignment_1.AssemblyInfo.cs
+C:\Users\prana\source\repos\Assignment_1\Assignment_1\obj\Debug\net6.0-windows\Assignment_1.csproj.CoreCompileInputs.cache
+C:\Users\prana\source\repos\Assignment_1\Assignment_1\obj\Debug\net6.0-windows\Assignment_1.dll
+C:\Users\prana\source\repos\Assignment_1\Assignment_1\obj\Debug\net6.0-windows\ref\Assignment_1.dll
+C:\Users\prana\source\repos\Assignment_1\Assignment_1\obj\Debug\net6.0-windows\Assignment_1.pdb
+C:\Users\prana\source\repos\Assignment_1\Assignment_1\obj\Debug\net6.0-windows\Assignment_1.genruntimeconfig.cache
+C:\Users\thais\OneDrive\Área de Trabalho\Assignment 01_prog 8010\Assignment_1_pranav_adjustments\Assignment_1\bin\Debug\net6.0-windows\Assignment_1.exe
+C:\Users\thais\OneDrive\Área de Trabalho\Assignment 01_prog 8010\Assignment_1_pranav_adjustments\Assignment_1\bin\Debug\net6.0-windows\Assignment_1.deps.json
+C:\Users\thais\OneDrive\Área de Trabalho\Assignment 01_prog 8010\Assignment_1_pranav_adjustments\Assignment_1\bin\Debug\net6.0-windows\Assignment_1.runtimeconfig.json
+C:\Users\thais\OneDrive\Área de Trabalho\Assignment 01_prog 8010\Assignment_1_pranav_adjustments\Assignment_1\bin\Debug\net6.0-windows\Assignment_1.dll
+C:\Users\thais\OneDrive\Área de Trabalho\Assignment 01_prog 8010\Assignment_1_pranav_adjustments\Assignment_1\bin\Debug\net6.0-windows\ref\Assignment_1.dll
+C:\Users\thais\OneDrive\Área de Trabalho\Assignment 01_prog 8010\Assignment_1_pranav_adjustments\Assignment_1\bin\Debug\net6.0-windows\Assignment_1.pdb
+C:\Users\thais\OneDrive\Área de Trabalho\Assignment 01_prog 8010\Assignment_1_pranav_adjustments\Assignment_1\obj\Debug\net6.0-windows\Assignment_1.csproj.AssemblyReference.cache
+C:\Users\thais\OneDrive\Área de Trabalho\Assignment 01_prog 8010\Assignment_1_pranav_adjustments\Assignment_1\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Users\thais\OneDrive\Área de Trabalho\Assignment 01_prog 8010\Assignment_1_pranav_adjustments\Assignment_1\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\thais\OneDrive\Área de Trabalho\Assignment 01_prog 8010\Assignment_1_pranav_adjustments\Assignment_1\obj\Debug\net6.0-windows\Assignment_1_MarkupCompile.cache
+C:\Users\thais\OneDrive\Área de Trabalho\Assignment 01_prog 8010\Assignment_1_pranav_adjustments\Assignment_1\obj\Debug\net6.0-windows\Assignment_1_MarkupCompile.lref
+C:\Users\thais\OneDrive\Área de Trabalho\Assignment 01_prog 8010\Assignment_1_pranav_adjustments\Assignment_1\obj\Debug\net6.0-windows\MainWindow.baml
+C:\Users\thais\OneDrive\Área de Trabalho\Assignment 01_prog 8010\Assignment_1_pranav_adjustments\Assignment_1\obj\Debug\net6.0-windows\Assignment_1.g.resources
+C:\Users\thais\OneDrive\Área de Trabalho\Assignment 01_prog 8010\Assignment_1_pranav_adjustments\Assignment_1\obj\Debug\net6.0-windows\Assignment_1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\thais\OneDrive\Área de Trabalho\Assignment 01_prog 8010\Assignment_1_pranav_adjustments\Assignment_1\obj\Debug\net6.0-windows\Assignment_1.AssemblyInfoInputs.cache
+C:\Users\thais\OneDrive\Área de Trabalho\Assignment 01_prog 8010\Assignment_1_pranav_adjustments\Assignment_1\obj\Debug\net6.0-windows\Assignment_1.AssemblyInfo.cs
+C:\Users\thais\OneDrive\Área de Trabalho\Assignment 01_prog 8010\Assignment_1_pranav_adjustments\Assignment_1\obj\Debug\net6.0-windows\Assignment_1.csproj.CoreCompileInputs.cache
+C:\Users\thais\OneDrive\Área de Trabalho\Assignment 01_prog 8010\Assignment_1_pranav_adjustments\Assignment_1\obj\Debug\net6.0-windows\Assignment_1.dll
+C:\Users\thais\OneDrive\Área de Trabalho\Assignment 01_prog 8010\Assignment_1_pranav_adjustments\Assignment_1\obj\Debug\net6.0-windows\ref\Assignment_1.dll
+C:\Users\thais\OneDrive\Área de Trabalho\Assignment 01_prog 8010\Assignment_1_pranav_adjustments\Assignment_1\obj\Debug\net6.0-windows\Assignment_1.pdb
+C:\Users\thais\OneDrive\Área de Trabalho\Assignment 01_prog 8010\Assignment_1_pranav_adjustments\Assignment_1\obj\Debug\net6.0-windows\Assignment_1.genruntimeconfig.cache
+C:\Users\prana\Desktop\PROG-8010\Assignment_1_pranav_adjustments_FINAL\Assignment_1_pranav_adjustments\Assignment_1\bin\Debug\net6.0-windows\Assignment_1.exe
+C:\Users\prana\Desktop\PROG-8010\Assignment_1_pranav_adjustments_FINAL\Assignment_1_pranav_adjustments\Assignment_1\bin\Debug\net6.0-windows\Assignment_1.deps.json
+C:\Users\prana\Desktop\PROG-8010\Assignment_1_pranav_adjustments_FINAL\Assignment_1_pranav_adjustments\Assignment_1\bin\Debug\net6.0-windows\Assignment_1.runtimeconfig.json
+C:\Users\prana\Desktop\PROG-8010\Assignment_1_pranav_adjustments_FINAL\Assignment_1_pranav_adjustments\Assignment_1\bin\Debug\net6.0-windows\Assignment_1.dll
+C:\Users\prana\Desktop\PROG-8010\Assignment_1_pranav_adjustments_FINAL\Assignment_1_pranav_adjustments\Assignment_1\bin\Debug\net6.0-windows\ref\Assignment_1.dll
+C:\Users\prana\Desktop\PROG-8010\Assignment_1_pranav_adjustments_FINAL\Assignment_1_pranav_adjustments\Assignment_1\bin\Debug\net6.0-windows\Assignment_1.pdb
+C:\Users\prana\Desktop\PROG-8010\Assignment_1_pranav_adjustments_FINAL\Assignment_1_pranav_adjustments\Assignment_1\obj\Debug\net6.0-windows\Assignment_1.csproj.AssemblyReference.cache
+C:\Users\prana\Desktop\PROG-8010\Assignment_1_pranav_adjustments_FINAL\Assignment_1_pranav_adjustments\Assignment_1\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Users\prana\Desktop\PROG-8010\Assignment_1_pranav_adjustments_FINAL\Assignment_1_pranav_adjustments\Assignment_1\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\prana\Desktop\PROG-8010\Assignment_1_pranav_adjustments_FINAL\Assignment_1_pranav_adjustments\Assignment_1\obj\Debug\net6.0-windows\Assignment_1_MarkupCompile.cache
+C:\Users\prana\Desktop\PROG-8010\Assignment_1_pranav_adjustments_FINAL\Assignment_1_pranav_adjustments\Assignment_1\obj\Debug\net6.0-windows\Assignment_1_MarkupCompile.lref
+C:\Users\prana\Desktop\PROG-8010\Assignment_1_pranav_adjustments_FINAL\Assignment_1_pranav_adjustments\Assignment_1\obj\Debug\net6.0-windows\MainWindow.baml
+C:\Users\prana\Desktop\PROG-8010\Assignment_1_pranav_adjustments_FINAL\Assignment_1_pranav_adjustments\Assignment_1\obj\Debug\net6.0-windows\Assignment_1.g.resources
+C:\Users\prana\Desktop\PROG-8010\Assignment_1_pranav_adjustments_FINAL\Assignment_1_pranav_adjustments\Assignment_1\obj\Debug\net6.0-windows\Assignment_1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\prana\Desktop\PROG-8010\Assignment_1_pranav_adjustments_FINAL\Assignment_1_pranav_adjustments\Assignment_1\obj\Debug\net6.0-windows\Assignment_1.AssemblyInfoInputs.cache
+C:\Users\prana\Desktop\PROG-8010\Assignment_1_pranav_adjustments_FINAL\Assignment_1_pranav_adjustments\Assignment_1\obj\Debug\net6.0-windows\Assignment_1.AssemblyInfo.cs
+C:\Users\prana\Desktop\PROG-8010\Assignment_1_pranav_adjustments_FINAL\Assignment_1_pranav_adjustments\Assignment_1\obj\Debug\net6.0-windows\Assignment_1.csproj.CoreCompileInputs.cache
+C:\Users\prana\Desktop\PROG-8010\Assignment_1_pranav_adjustments_FINAL\Assignment_1_pranav_adjustments\Assignment_1\obj\Debug\net6.0-windows\Assignment_1.dll
+C:\Users\prana\Desktop\PROG-8010\Assignment_1_pranav_adjustments_FINAL\Assignment_1_pranav_adjustments\Assignment_1\obj\Debug\net6.0-windows\ref\Assignment_1.dll
+C:\Users\prana\Desktop\PROG-8010\Assignment_1_pranav_adjustments_FINAL\Assignment_1_pranav_adjustments\Assignment_1\obj\Debug\net6.0-windows\Assignment_1.pdb
+C:\Users\prana\Desktop\PROG-8010\Assignment_1_pranav_adjustments_FINAL\Assignment_1_pranav_adjustments\Assignment_1\obj\Debug\net6.0-windows\Assignment_1.genruntimeconfig.cache

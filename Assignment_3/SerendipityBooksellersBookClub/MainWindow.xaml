@@ -1,0 +1,28 @@
+﻿<Window x:Class="SerendipityBooksellersBookClub.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SerendipityBooksellersBookClub"
+        mc:Ignorable="d"
+        Title="Serendipity Booksellers Club Points Calculator" Height="400" Width="600" ResizeMode="NoResize">
+    <Grid Name="MainGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*" ></ColumnDefinition>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label Name="headingLabel" Foreground="#43291f" Content="S B C Points Calculator" Grid.Row="0" Grid.ColumnSpan="3" Margin="5,5,5,5" FontSize="40" FontFamily="Sylfaen" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" ></Label>
+        <Label Name="numberOfBooksLabel" Foreground="#43291f" Content="Enter Books Purchased" Grid.Row="1" Grid.Column="0" Margin="5,5,5,5" FontSize="25" FontFamily="Sylfaen" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Grid.ColumnSpan="2" ></Label>
+        <TextBox Name="numberOfBooksTBx" Text="" Grid.Row="1" Grid.Column="2" FontSize="30"  VerticalAlignment="Center" HorizontalAlignment="Left" Width="138" Height="40" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="62,0,0,0" />
+        <Button Name="calculatePoints" Background="Green" Content="Calculate" Grid.Row="2" FontSize="30" Width="200" Height="75" Click="CalcPoints" Grid.Column="2" Margin="50,11,50,10"/>
+        <Button Name="clear" Background="Orange" Content="Reset" Grid.Row="2" FontSize="30" Width="200" Height="75" Click="ClearBtnClick" Grid.Column="0" Grid.ColumnSpan="2" Margin="50,11,50,10"/>
+        <TextBlock Name="pointsEarnedTBlck" Foreground="#43291f"  Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" Margin="100,24,0,0" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Top" Width="400"></TextBlock>
+    </Grid>
+</Window>

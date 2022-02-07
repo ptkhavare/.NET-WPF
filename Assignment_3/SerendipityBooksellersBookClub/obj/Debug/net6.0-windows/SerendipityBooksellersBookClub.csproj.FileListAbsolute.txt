@@ -1,0 +1,63 @@
+C:\Users\prana\source\repos\SerendipityBooksellersBookClub\SerendipityBooksellersBookClub\bin\Debug\net6.0-windows\SerendipityBooksellersBookClub.exe
+C:\Users\prana\source\repos\SerendipityBooksellersBookClub\SerendipityBooksellersBookClub\bin\Debug\net6.0-windows\SerendipityBooksellersBookClub.deps.json
+C:\Users\prana\source\repos\SerendipityBooksellersBookClub\SerendipityBooksellersBookClub\bin\Debug\net6.0-windows\SerendipityBooksellersBookClub.runtimeconfig.json
+C:\Users\prana\source\repos\SerendipityBooksellersBookClub\SerendipityBooksellersBookClub\bin\Debug\net6.0-windows\SerendipityBooksellersBookClub.dll
+C:\Users\prana\source\repos\SerendipityBooksellersBookClub\SerendipityBooksellersBookClub\bin\Debug\net6.0-windows\ref\SerendipityBooksellersBookClub.dll
+C:\Users\prana\source\repos\SerendipityBooksellersBookClub\SerendipityBooksellersBookClub\bin\Debug\net6.0-windows\SerendipityBooksellersBookClub.pdb
+C:\Users\prana\source\repos\SerendipityBooksellersBookClub\SerendipityBooksellersBookClub\obj\Debug\net6.0-windows\SerendipityBooksellersBookClub.csproj.AssemblyReference.cache
+C:\Users\prana\source\repos\SerendipityBooksellersBookClub\SerendipityBooksellersBookClub\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Users\prana\source\repos\SerendipityBooksellersBookClub\SerendipityBooksellersBookClub\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\prana\source\repos\SerendipityBooksellersBookClub\SerendipityBooksellersBookClub\obj\Debug\net6.0-windows\SerendipityBooksellersBookClub_MarkupCompile.cache
+C:\Users\prana\source\repos\SerendipityBooksellersBookClub\SerendipityBooksellersBookClub\obj\Debug\net6.0-windows\SerendipityBooksellersBookClub_MarkupCompile.lref
+C:\Users\prana\source\repos\SerendipityBooksellersBookClub\SerendipityBooksellersBookClub\obj\Debug\net6.0-windows\MainWindow.baml
+C:\Users\prana\source\repos\SerendipityBooksellersBookClub\SerendipityBooksellersBookClub\obj\Debug\net6.0-windows\SerendipityBooksellersBookClub.g.resources
+C:\Users\prana\source\repos\SerendipityBooksellersBookClub\SerendipityBooksellersBookClub\obj\Debug\net6.0-windows\SerendipityBooksellersBookClub.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\prana\source\repos\SerendipityBooksellersBookClub\SerendipityBooksellersBookClub\obj\Debug\net6.0-windows\SerendipityBooksellersBookClub.AssemblyInfoInputs.cache
+C:\Users\prana\source\repos\SerendipityBooksellersBookClub\SerendipityBooksellersBookClub\obj\Debug\net6.0-windows\SerendipityBooksellersBookClub.AssemblyInfo.cs
+C:\Users\prana\source\repos\SerendipityBooksellersBookClub\SerendipityBooksellersBookClub\obj\Debug\net6.0-windows\SerendipityBooksellersBookClub.csproj.CoreCompileInputs.cache
+C:\Users\prana\source\repos\SerendipityBooksellersBookClub\SerendipityBooksellersBookClub\obj\Debug\net6.0-windows\SerendipityBooksellersBookClub.dll
+C:\Users\prana\source\repos\SerendipityBooksellersBookClub\SerendipityBooksellersBookClub\obj\Debug\net6.0-windows\ref\SerendipityBooksellersBookClub.dll
+C:\Users\prana\source\repos\SerendipityBooksellersBookClub\SerendipityBooksellersBookClub\obj\Debug\net6.0-windows\SerendipityBooksellersBookClub.pdb
+C:\Users\prana\source\repos\SerendipityBooksellersBookClub\SerendipityBooksellersBookClub\obj\Debug\net6.0-windows\SerendipityBooksellersBookClub.genruntimeconfig.cache
+C:\Users\keval\OneDrive\Desktop\Study\We Development C# 8010\SerendipityBookClub\SerendipityBooksellersBookClub\SerendipityBooksellersBookClub\bin\Debug\net6.0-windows\SerendipityBooksellersBookClub.exe
+C:\Users\keval\OneDrive\Desktop\Study\We Development C# 8010\SerendipityBookClub\SerendipityBooksellersBookClub\SerendipityBooksellersBookClub\bin\Debug\net6.0-windows\SerendipityBooksellersBookClub.deps.json
+C:\Users\keval\OneDrive\Desktop\Study\We Development C# 8010\SerendipityBookClub\SerendipityBooksellersBookClub\SerendipityBooksellersBookClub\bin\Debug\net6.0-windows\SerendipityBooksellersBookClub.runtimeconfig.json
+C:\Users\keval\OneDrive\Desktop\Study\We Development C# 8010\SerendipityBookClub\SerendipityBooksellersBookClub\SerendipityBooksellersBookClub\bin\Debug\net6.0-windows\SerendipityBooksellersBookClub.dll
+C:\Users\keval\OneDrive\Desktop\Study\We Development C# 8010\SerendipityBookClub\SerendipityBooksellersBookClub\SerendipityBooksellersBookClub\bin\Debug\net6.0-windows\ref\SerendipityBooksellersBookClub.dll
+C:\Users\keval\OneDrive\Desktop\Study\We Development C# 8010\SerendipityBookClub\SerendipityBooksellersBookClub\SerendipityBooksellersBookClub\bin\Debug\net6.0-windows\SerendipityBooksellersBookClub.pdb
+C:\Users\keval\OneDrive\Desktop\Study\We Development C# 8010\SerendipityBookClub\SerendipityBooksellersBookClub\SerendipityBooksellersBookClub\obj\Debug\net6.0-windows\SerendipityBooksellersBookClub.csproj.AssemblyReference.cache
+C:\Users\keval\OneDrive\Desktop\Study\We Development C# 8010\SerendipityBookClub\SerendipityBooksellersBookClub\SerendipityBooksellersBookClub\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Users\keval\OneDrive\Desktop\Study\We Development C# 8010\SerendipityBookClub\SerendipityBooksellersBookClub\SerendipityBooksellersBookClub\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\keval\OneDrive\Desktop\Study\We Development C# 8010\SerendipityBookClub\SerendipityBooksellersBookClub\SerendipityBooksellersBookClub\obj\Debug\net6.0-windows\SerendipityBooksellersBookClub_MarkupCompile.cache
+C:\Users\keval\OneDrive\Desktop\Study\We Development C# 8010\SerendipityBookClub\SerendipityBooksellersBookClub\SerendipityBooksellersBookClub\obj\Debug\net6.0-windows\SerendipityBooksellersBookClub_MarkupCompile.lref
+C:\Users\keval\OneDrive\Desktop\Study\We Development C# 8010\SerendipityBookClub\SerendipityBooksellersBookClub\SerendipityBooksellersBookClub\obj\Debug\net6.0-windows\MainWindow.baml
+C:\Users\keval\OneDrive\Desktop\Study\We Development C# 8010\SerendipityBookClub\SerendipityBooksellersBookClub\SerendipityBooksellersBookClub\obj\Debug\net6.0-windows\SerendipityBooksellersBookClub.g.resources
+C:\Users\keval\OneDrive\Desktop\Study\We Development C# 8010\SerendipityBookClub\SerendipityBooksellersBookClub\SerendipityBooksellersBookClub\obj\Debug\net6.0-windows\SerendipityBooksellersBookClub.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\keval\OneDrive\Desktop\Study\We Development C# 8010\SerendipityBookClub\SerendipityBooksellersBookClub\SerendipityBooksellersBookClub\obj\Debug\net6.0-windows\SerendipityBooksellersBookClub.AssemblyInfoInputs.cache
+C:\Users\keval\OneDrive\Desktop\Study\We Development C# 8010\SerendipityBookClub\SerendipityBooksellersBookClub\SerendipityBooksellersBookClub\obj\Debug\net6.0-windows\SerendipityBooksellersBookClub.AssemblyInfo.cs
+C:\Users\keval\OneDrive\Desktop\Study\We Development C# 8010\SerendipityBookClub\SerendipityBooksellersBookClub\SerendipityBooksellersBookClub\obj\Debug\net6.0-windows\SerendipityBooksellersBookClub.csproj.CoreCompileInputs.cache
+C:\Users\keval\OneDrive\Desktop\Study\We Development C# 8010\SerendipityBookClub\SerendipityBooksellersBookClub\SerendipityBooksellersBookClub\obj\Debug\net6.0-windows\SerendipityBooksellersBookClub.dll
+C:\Users\keval\OneDrive\Desktop\Study\We Development C# 8010\SerendipityBookClub\SerendipityBooksellersBookClub\SerendipityBooksellersBookClub\obj\Debug\net6.0-windows\ref\SerendipityBooksellersBookClub.dll
+C:\Users\keval\OneDrive\Desktop\Study\We Development C# 8010\SerendipityBookClub\SerendipityBooksellersBookClub\SerendipityBooksellersBookClub\obj\Debug\net6.0-windows\SerendipityBooksellersBookClub.pdb
+C:\Users\keval\OneDrive\Desktop\Study\We Development C# 8010\SerendipityBookClub\SerendipityBooksellersBookClub\SerendipityBooksellersBookClub\obj\Debug\net6.0-windows\SerendipityBooksellersBookClub.genruntimeconfig.cache
+C:\Users\thais\OneDrive\Área de Trabalho\SerendipityBookClub\SerendipityBooksellersBookClub\SerendipityBooksellersBookClub\bin\Debug\net6.0-windows\SerendipityBooksellersBookClub.exe
+C:\Users\thais\OneDrive\Área de Trabalho\SerendipityBookClub\SerendipityBooksellersBookClub\SerendipityBooksellersBookClub\bin\Debug\net6.0-windows\SerendipityBooksellersBookClub.deps.json
+C:\Users\thais\OneDrive\Área de Trabalho\SerendipityBookClub\SerendipityBooksellersBookClub\SerendipityBooksellersBookClub\bin\Debug\net6.0-windows\SerendipityBooksellersBookClub.runtimeconfig.json
+C:\Users\thais\OneDrive\Área de Trabalho\SerendipityBookClub\SerendipityBooksellersBookClub\SerendipityBooksellersBookClub\bin\Debug\net6.0-windows\SerendipityBooksellersBookClub.dll
+C:\Users\thais\OneDrive\Área de Trabalho\SerendipityBookClub\SerendipityBooksellersBookClub\SerendipityBooksellersBookClub\bin\Debug\net6.0-windows\ref\SerendipityBooksellersBookClub.dll
+C:\Users\thais\OneDrive\Área de Trabalho\SerendipityBookClub\SerendipityBooksellersBookClub\SerendipityBooksellersBookClub\bin\Debug\net6.0-windows\SerendipityBooksellersBookClub.pdb
+C:\Users\thais\OneDrive\Área de Trabalho\SerendipityBookClub\SerendipityBooksellersBookClub\SerendipityBooksellersBookClub\obj\Debug\net6.0-windows\SerendipityBooksellersBookClub.csproj.AssemblyReference.cache
+C:\Users\thais\OneDrive\Área de Trabalho\SerendipityBookClub\SerendipityBooksellersBookClub\SerendipityBooksellersBookClub\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Users\thais\OneDrive\Área de Trabalho\SerendipityBookClub\SerendipityBooksellersBookClub\SerendipityBooksellersBookClub\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\thais\OneDrive\Área de Trabalho\SerendipityBookClub\SerendipityBooksellersBookClub\SerendipityBooksellersBookClub\obj\Debug\net6.0-windows\SerendipityBooksellersBookClub_MarkupCompile.cache
+C:\Users\thais\OneDrive\Área de Trabalho\SerendipityBookClub\SerendipityBooksellersBookClub\SerendipityBooksellersBookClub\obj\Debug\net6.0-windows\SerendipityBooksellersBookClub_MarkupCompile.lref
+C:\Users\thais\OneDrive\Área de Trabalho\SerendipityBookClub\SerendipityBooksellersBookClub\SerendipityBooksellersBookClub\obj\Debug\net6.0-windows\MainWindow.baml
+C:\Users\thais\OneDrive\Área de Trabalho\SerendipityBookClub\SerendipityBooksellersBookClub\SerendipityBooksellersBookClub\obj\Debug\net6.0-windows\SerendipityBooksellersBookClub.g.resources
+C:\Users\thais\OneDrive\Área de Trabalho\SerendipityBookClub\SerendipityBooksellersBookClub\SerendipityBooksellersBookClub\obj\Debug\net6.0-windows\SerendipityBooksellersBookClub.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\thais\OneDrive\Área de Trabalho\SerendipityBookClub\SerendipityBooksellersBookClub\SerendipityBooksellersBookClub\obj\Debug\net6.0-windows\SerendipityBooksellersBookClub.AssemblyInfoInputs.cache
+C:\Users\thais\OneDrive\Área de Trabalho\SerendipityBookClub\SerendipityBooksellersBookClub\SerendipityBooksellersBookClub\obj\Debug\net6.0-windows\SerendipityBooksellersBookClub.AssemblyInfo.cs
+C:\Users\thais\OneDrive\Área de Trabalho\SerendipityBookClub\SerendipityBooksellersBookClub\SerendipityBooksellersBookClub\obj\Debug\net6.0-windows\SerendipityBooksellersBookClub.csproj.CoreCompileInputs.cache
+C:\Users\thais\OneDrive\Área de Trabalho\SerendipityBookClub\SerendipityBooksellersBookClub\SerendipityBooksellersBookClub\obj\Debug\net6.0-windows\SerendipityBooksellersBookClub.dll
+C:\Users\thais\OneDrive\Área de Trabalho\SerendipityBookClub\SerendipityBooksellersBookClub\SerendipityBooksellersBookClub\obj\Debug\net6.0-windows\ref\SerendipityBooksellersBookClub.dll
+C:\Users\thais\OneDrive\Área de Trabalho\SerendipityBookClub\SerendipityBooksellersBookClub\SerendipityBooksellersBookClub\obj\Debug\net6.0-windows\SerendipityBooksellersBookClub.pdb
+C:\Users\thais\OneDrive\Área de Trabalho\SerendipityBookClub\SerendipityBooksellersBookClub\SerendipityBooksellersBookClub\obj\Debug\net6.0-windows\SerendipityBooksellersBookClub.genruntimeconfig.cache

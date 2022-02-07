@@ -1,0 +1,36 @@
+﻿<Window x:Class="Assignment_1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Assignment_1"
+        mc:Ignorable="d"
+        Title="Latin To English" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/backgroundimage.jpg"></ImageBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" ></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Label Name="headingLabel" Foreground="White" Content="Latin To English Translator" Grid.Row="0" Grid.ColumnSpan="4" Margin="5" FontSize="40" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" ></Label>
+        <Label Name="latinTitleLabel" Background="Aquamarine" Grid.Row="1" Grid.Column="0" Margin="10" FontSize="40" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="Latin"></Label>
+        <Label Name="engTitleLabel" Background="Aquamarine" Grid.Row="3" Grid.Column="0" Margin="10" FontSize="40" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="English"></Label>
+        <Button Name="sinister" Margin="10" Background="Orange" Content="Sinister" Grid.Row="1" Grid.Column="1" FontSize="45" Width="200" Height="80" Click="SinisterBtnClick" VerticalAlignment="Center" HorizontalAlignment="Center"></Button>
+        <Button Name="dexter" Margin="10" Background="Orange" Content="Dexter" Grid.Row="1" Grid.Column="3"  FontSize="45" Width="200" Height="80" Click="DexterBtnClick" VerticalAlignment="Center" HorizontalAlignment="Center"></Button>
+        <Button Name="medium" Margin="10"  Background="Orange" Content="Medium" Grid.Row="1" Grid.Column="2"  FontSize="45" Width="200" Height="80" Click="MediumBtnClick" VerticalAlignment="Center" HorizontalAlignment="Center"></Button>
+        <Label Name="englishTranslationLabel" Foreground="White" Grid.Row="3" Grid.Column="2"  FontSize="45" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
+        <Button Name="clear" Margin="45,10" Background="OrangeRed" Content="Clear" Grid.Row="5" Grid.Column="2" FontSize="35" Width="200" Height="80" Click="ClearBtnClick" HorizontalAlignment="Center" VerticalAlignment="Center"></Button>
+    </Grid>
+</Window>

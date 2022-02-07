@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "fe96527b-f0c8-4a80-9cd5-c3e62821aaeb": {
+      "ProjectGuid": "fe96527b-f0c8-4a80-9cd5-c3e62821aaeb",
+      "DisplayName": "stadiumRevenueCalculator",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
