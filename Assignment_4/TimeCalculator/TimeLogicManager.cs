@@ -15,7 +15,7 @@ namespace TimeCalculator
             set { seconds = value; NotifyPropertyChanged(); }
         }
 
-        private string result = "Enter Seconds";
+        private string result = "* Result Displayed Here *";
         public string Result
         {
             get { return result; }
@@ -26,53 +26,60 @@ namespace TimeCalculator
         #region logic
         public void calcTime()
         {
-            StringBuilder stringBuilder = new StringBuilder();
-            TimeSpan ts = TimeSpan.FromSeconds(Seconds);
-            if (ts.Days != 0)
+            if (Seconds == 0)
             {
-                if (ts.Days == 1)
-                {
-                    stringBuilder.Append(ts.Days + " Day ");
-                }
-                else
-                {
-                    stringBuilder.Append(ts.Days + " Days ");
-                }
+                Result = "Enter more than 0 seconds";
             }
-            if (ts.Hours != 0)
+            else
             {
-                if (ts.Hours == 1)
+                StringBuilder stringBuilder = new StringBuilder();
+                TimeSpan ts = TimeSpan.FromSeconds(Seconds);
+                if (ts.Days != 0)
                 {
-                    stringBuilder.Append(ts.Hours + " Hour ");
+                    if (ts.Days == 1)
+                    {
+                        stringBuilder.Append(ts.Days + " Day ");
+                    }
+                    else
+                    {
+                        stringBuilder.Append(ts.Days + " Days ");
+                    }
                 }
-                else
+                if (ts.Hours != 0)
                 {
-                    stringBuilder.Append(ts.Hours + " Hours ");
+                    if (ts.Hours == 1)
+                    {
+                        stringBuilder.Append(ts.Hours + " Hour ");
+                    }
+                    else
+                    {
+                        stringBuilder.Append(ts.Hours + " Hours ");
+                    }
                 }
+                if (ts.Minutes != 0)
+                {
+                    if (ts.Minutes == 1)
+                    {
+                        stringBuilder.Append(ts.Minutes + " Minute ");
+                    }
+                    else
+                    {
+                        stringBuilder.Append(ts.Minutes + " Minutes ");
+                    }
+                }
+                if (ts.Seconds != 0)
+                {
+                    if (ts.Seconds == 1)
+                    {
+                        stringBuilder.Append(ts.Seconds + " Second ");
+                    }
+                    else
+                    {
+                        stringBuilder.Append(ts.Seconds + " Seconds ");
+                    }
+                }
+                Result = stringBuilder.ToString();
             }
-            if (ts.Minutes != 0)
-            {
-                if (ts.Minutes == 1)
-                {
-                    stringBuilder.Append(ts.Minutes + " Minute ");
-                }
-                else
-                {
-                    stringBuilder.Append(ts.Minutes + " Minutes ");
-                }
-            }
-            if (ts.Seconds != 0)
-            {
-                if (ts.Seconds == 1)
-                {
-                    stringBuilder.Append(ts.Seconds + " Second ");
-                }
-                else
-                {
-                    stringBuilder.Append(ts.Seconds + " Seconds ");
-                }
-            }
-            Result = stringBuilder.ToString();
         }
         #endregion
 

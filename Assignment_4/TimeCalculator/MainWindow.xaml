@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TimeCalculator"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Seconds To Time Convertor" Height="450" Width="800" ResizeMode="NoResize">
     <Grid>
         <Grid.Background>
             <SolidColorBrush Color="Black"></SolidColorBrush>
@@ -26,11 +26,11 @@
         <Label Name="secLabel" Foreground="White" Content="Enter Seconds" 
                Grid.Row="1"  Margin="5" FontSize="40" 
                HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
-        <TextBox Name="secValue" Text="{Binding Seconds}" VerticalAlignment="Center" HorizontalAlignment="Center" 
+        <TextBox Name="secValue" Text="{Binding Seconds}" HorizontalContentAlignment="Right" VerticalAlignment="Center" HorizontalAlignment="Center" 
                  FontSize="40" Grid.Row="1" Grid.Column="1" Width="180"></TextBox>
         <Button Name="calculateTimes" Background="Green" Content="Calculate" 
                 Grid.Row="2" Grid.ColumnSpan="2" FontSize="35" Width="250" Height="75" Click="CalculateTime" HorizontalContentAlignment="Center"/>
         <TextBlock Name="result" Text="{Binding Result}" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center" 
-                 FontSize="40" Grid.Row="3" Grid.ColumnSpan="2"></TextBlock>
+                 FontSize="35" Grid.Row="3" Grid.ColumnSpan="2"></TextBlock>
     </Grid>
 </Window>
