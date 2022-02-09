@@ -26,7 +26,7 @@ namespace TimeCalculator
         #region logic
         public void calcTime()
         {
-            if (Seconds == 0)
+            if (Seconds == 0 || Seconds < 0)
             {
                 Result = "Enter more than 0 seconds";
             }
