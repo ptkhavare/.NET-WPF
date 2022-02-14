@@ -1,17 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.IO;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace DistanceCalculator
 {
@@ -20,9 +8,25 @@ namespace DistanceCalculator
     /// </summary>
     public partial class MainWindow : Window
     {
+        DistanceLogicManager distanceLogicManager;
         public MainWindow()
         {
             InitializeComponent();
+            distanceLogicManager = new DistanceLogicManager();
+            DataContext = distanceLogicManager;
+        }
+
+        public void CalculateDistance(object sender, RoutedEventArgs e)
+        {
+            string output = "";
+            int time = distanceLogicManager.Time;
+            int speed = distanceLogicManager.Speed;
+            for (int i = 1; i <= time; i++)
+            {
+                List.Items.Add(speed * i);
+            }
+            output = "Speed" + speed + "Time ";
+            File.AppendAllText("output.txt",output);
         }
     }
 }
