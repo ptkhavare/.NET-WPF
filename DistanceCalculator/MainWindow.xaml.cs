@@ -18,11 +18,21 @@ namespace DistanceCalculator
 
         public void CalculateDistance(object sender, RoutedEventArgs e)
         {
-            distanceLogicManager.CalcDistance();
-            //todo clear file
-            //todo bindinglist
-            //todo path.
-            //observable
+            bool unit = false;
+
+            if(KM.IsChecked != null)
+            {
+                unit = (bool)KM.IsChecked;
+            }
+
+            if (unit == true)
+            {
+                distanceLogicManager.CalcDistance(true);
+            }
+            else
+            {
+                distanceLogicManager.CalcDistance(false);
+            }
         }
     }
 }

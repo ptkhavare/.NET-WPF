@@ -9,6 +9,8 @@ namespace DistanceCalculator
     internal class DistanceLogicManager : INotifyPropertyChanged
     {
         #region Properties
+        private const int secInHour = 3600;
+        private const int kmInMeters = 1000;
 
         private int speed;
         private int time;
@@ -34,7 +36,7 @@ namespace DistanceCalculator
         #endregion
 
         #region Logic
-        public void CalcDistance()
+        public void CalcDistance(bool unitKM)
         {
             if (!Directory.Exists(filePath))
             {
@@ -52,13 +54,20 @@ namespace DistanceCalculator
             for (int i = 1; i <= time; i++)
             {
                 string result;
-                if (i == 1)
+                if (unitKM)
                 {
-                    result = "Distance after " + i + " hour " + speed * i + "km";
+                    if (i == 1)
+                    {
+                        result = "Distance after " + i + " hour " + speed * i + "km";
+                    }
+                    else
+                    {
+                        result = "Distance after " + i + " hours " + speed * i + "km";
+                    }
                 }
                 else
                 {
-                    result = "Distance after " + i + " hours " + speed * i + "km";
+                        result = "Distance after " + i*(secInHour) + " seconds " + (speed * i)*(kmInMeters) + "meters";
                 }
                 Distances.Add(result);
                 stringBuilder.Append(Environment.NewLine);

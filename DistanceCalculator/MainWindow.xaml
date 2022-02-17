@@ -5,12 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DistanceCalculator"
         mc:Ignorable="d"
-        Title="Distance Calculator" Height="450" Width="800">
+        Title="Distance Calculator" Height="600" Width="1200">
     <Grid>
         <Grid.Background>
             <SolidColorBrush Color="Black"></SolidColorBrush>
         </Grid.Background>
         <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
@@ -39,6 +40,8 @@
         <Button Name="calculateTimes" Background="Green" Content="Calculate" 
                 Grid.Row="3" Grid.ColumnSpan="2" FontSize="35" Width="150" Height="50" 
                 Click="CalculateDistance" HorizontalContentAlignment="Center"/>
-        <ListBox Name="List" Grid.Row="4" Grid.ColumnSpan="2" ItemsSource="{Binding Distances}" FontSize="35"></ListBox>
+        <RadioButton GroupName="unitSelection" Name="KM" Grid.Row="4" Grid.Column="0" Content="KM/h" FontSize="35" Foreground="White" IsChecked="True"></RadioButton>
+        <RadioButton GroupName="unitSelection" Name="M" Grid.Row="4" Grid.Column="1" Content="M/s" FontSize="35" Foreground="White"></RadioButton>
+        <ListBox Name="List" Grid.Row="5" Grid.ColumnSpan="2" ItemsSource="{Binding Distances}" FontSize="35"></ListBox>
     </Grid>
 </Window>
