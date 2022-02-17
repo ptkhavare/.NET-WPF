@@ -11,6 +11,7 @@ namespace DistanceCalculator
         #region Properties
         private const int secInHour = 3600;
         private const int kmInMeters = 1000;
+        private const float kmToMilesFactor = 0.6214F;
 
         private int speed;
         private int time;
@@ -36,7 +37,7 @@ namespace DistanceCalculator
         #endregion
 
         #region Logic
-        public void CalcDistance(bool unitKM)
+        public void CalcDistance(int unitSelected)
         {
             if (!Directory.Exists(filePath))
             {
@@ -53,8 +54,8 @@ namespace DistanceCalculator
             stringBuilder.Append("Speed = " + speed + " Time = " + time);
             for (int i = 1; i <= time; i++)
             {
-                string result;
-                if (unitKM)
+                string result="";
+                if (unitSelected == 0)
                 {
                     if (i == 1)
                     {
@@ -65,9 +66,19 @@ namespace DistanceCalculator
                         result = "Distance after " + i + " hours " + speed * i + "km";
                     }
                 }
-                else
+                else if(unitSelected == 1)
                 {
                         result = "Distance after " + i*(secInHour) + " seconds " + (speed * i)*(kmInMeters) + "meters";
+                }else if (unitSelected == 2)
+                {
+                    if (i == 1)
+                    {
+                        result = "Distance after " + i + " hour " + Math.Round((speed * i)*(kmToMilesFactor),2) + "Miles";
+                    }
+                    else
+                    {
+                        result = "Distance after " + i + " hours " + Math.Round((speed * i) * (kmToMilesFactor), 2) + "Miles";
+                    }
                 }
                 Distances.Add(result);
                 stringBuilder.Append(Environment.NewLine);

@@ -21,6 +21,7 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Label Name="headingLabel" Foreground="White" Content="Distance Calculator" 
                Grid.Row="0" Grid.ColumnSpan="2" Margin="5" FontSize="35" 
@@ -38,10 +39,11 @@
                  VerticalAlignment="Center" HorizontalAlignment="Center" 
                  FontSize="40" Grid.Row="2" Grid.Column="1" Width="180"></TextBox>
         <Button Name="calculateTimes" Background="Green" Content="Calculate" 
-                Grid.Row="3" Grid.ColumnSpan="2" FontSize="35" Width="150" Height="50" 
+                Grid.Row="3" Grid.ColumnSpan="3" FontSize="35" Width="150" Height="50" 
                 Click="CalculateDistance" HorizontalContentAlignment="Center"/>
-        <RadioButton GroupName="unitSelection" Name="KM" Grid.Row="4" Grid.Column="0" Content="KM/h" FontSize="35" Foreground="White" IsChecked="True"></RadioButton>
-        <RadioButton GroupName="unitSelection" Name="M" Grid.Row="4" Grid.Column="1" Content="M/s" FontSize="35" Foreground="White"></RadioButton>
-        <ListBox Name="List" Grid.Row="5" Grid.ColumnSpan="2" ItemsSource="{Binding Distances}" FontSize="35"></ListBox>
+        <RadioButton GroupName="unitSelection" Name="KMRd" Grid.Row="4" Grid.Column="0" Content="KM/h" FontSize="35" Foreground="White" IsChecked="True"></RadioButton>
+        <RadioButton GroupName="unitSelection" Name="MetersRd" Grid.Row="4"  Grid.Column="1" Content="M/s" FontSize="35" Foreground="White"></RadioButton>
+        <RadioButton GroupName="unitSelection" Name="MilesRd" Grid.Row="4" Grid.Column="2" Content="Miles/h" FontSize="35" Foreground="White"></RadioButton>
+        <ListBox Name="List" Grid.Row="5" Grid.ColumnSpan="3" ItemsSource="{Binding Distances}" FontSize="35"></ListBox>
     </Grid>
 </Window>
