@@ -24,13 +24,13 @@
         <Label Name="headingLabel" Foreground="White" Content="Distance Calculator" 
                Grid.Row="0" Grid.ColumnSpan="2" Margin="5" FontSize="35" 
                HorizontalContentAlignment="Center" VerticalContentAlignment="Center" ></Label>
-        <Label Name="speedLabel" Foreground="White" Content="Enter Speed" 
+        <Label Name="speedLabel" Foreground="White" Content="Enter Speed (KM/H)" 
                Grid.Row="1"  Margin="5" FontSize="35" 
                HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
         <TextBox Name="speedValue" Text="{Binding Speed}" HorizontalContentAlignment="Right" 
                  VerticalAlignment="Center" HorizontalAlignment="Center" 
                  FontSize="40" Grid.Row="1" Grid.Column="1" Width="180"></TextBox>
-        <Label Name="timeLabel" Foreground="White" Content="Enter Time" 
+        <Label Name="timeLabel" Foreground="White" Content="Enter Time (Hours)" 
                Grid.Row="2"  Margin="5" FontSize="35" 
                HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
         <TextBox Name="timeValue" Text="{Binding Time}" HorizontalContentAlignment="Right" 
@@ -39,8 +39,6 @@
         <Button Name="calculateTimes" Background="Green" Content="Calculate" 
                 Grid.Row="3" Grid.ColumnSpan="2" FontSize="35" Width="150" Height="50" 
                 Click="CalculateDistance" HorizontalContentAlignment="Center"/>
-        <ListBox Name="List" Grid.Row="4" Grid.ColumnSpan="2">
-            
-        </ListBox>
+        <ListBox Name="List" Grid.Row="4" Grid.ColumnSpan="2" ItemsSource="{Binding Distances}" FontSize="35"></ListBox>
     </Grid>
 </Window>

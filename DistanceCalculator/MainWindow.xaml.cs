@@ -1,5 +1,4 @@
-﻿using System.IO;
-using System.Windows;
+﻿using System.Windows;
 
 namespace DistanceCalculator
 {
@@ -9,6 +8,7 @@ namespace DistanceCalculator
     public partial class MainWindow : Window
     {
         DistanceLogicManager distanceLogicManager;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -18,15 +18,11 @@ namespace DistanceCalculator
 
         public void CalculateDistance(object sender, RoutedEventArgs e)
         {
-            string output = "";
-            int time = distanceLogicManager.Time;
-            int speed = distanceLogicManager.Speed;
-            for (int i = 1; i <= time; i++)
-            {
-                List.Items.Add(speed * i);
-            }
-            output = "Speed" + speed + "Time ";
-            File.AppendAllText("output.txt",output);
+            distanceLogicManager.CalcDistance();
+            //todo clear file
+            //todo bindinglist
+            //todo path.
+            //observable
         }
     }
 }
