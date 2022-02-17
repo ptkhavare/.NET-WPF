@@ -8,10 +8,35 @@ namespace DistanceCalculator
 {
     internal class DistanceLogicManager : INotifyPropertyChanged
     {
+        #region enums
+        enum DistancUnit
+        {
+            KMH,
+            MS,
+            MILESH
+        }
+        #endregion
+
         #region Properties
         private const int secInHour = 3600;
         private const int kmInMeters = 1000;
+        private const int roundingDigit = 2;
+
         private const float kmToMilesFactor = 0.6214F;
+
+        private const string Filename = "result.txt";
+        private const string FolderName = "DistanceCalculator";
+        private const string ResultStartFormat = "Distance after ";
+        private const string seconds = " seconds ";
+        private const string hour = " hour ";
+        private const string hours = " hours ";
+        private const string KMS = "KMs";
+        private const string Meters = "Meters";
+        private const string Miles = "Miles";
+        private const string SpeedFormat = "Speed ";
+        private const string TimeFormat = " Time ";
+        private const string ConcatSymbol = " = ";
+
 
         private int speed;
         private int time;
@@ -31,9 +56,8 @@ namespace DistanceCalculator
         #endregion
 
         #region Class Properties & I/O properties
-        static readonly string fileName = "result.txt";
-        static readonly string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "DistanceCalculator");
-        private readonly string fullName = Path.Combine(filePath, fileName);
+        static readonly string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), FolderName);
+        readonly string fullName = Path.Combine(filePath, Filename);
         #endregion
 
         #region Logic
@@ -49,35 +73,34 @@ namespace DistanceCalculator
                 Distances.Clear();
             }
             StringBuilder stringBuilder = new StringBuilder();
-            int time = Time;
-            int speed = Speed;
-            stringBuilder.Append("Speed = " + speed + " Time = " + time);
-            for (int i = 1; i <= time; i++)
+            stringBuilder.Append(SpeedFormat + ConcatSymbol + Speed + TimeFormat + ConcatSymbol + Time);
+            for (int i = 1; i <= Time; i++)
             {
-                string result="";
-                if (unitSelected == 0)
+                string result = "";
+                if (unitSelected == (int)DistancUnit.KMH)
                 {
                     if (i == 1)
                     {
-                        result = "Distance after " + i + " hour " + speed * i + "km";
+                        result = ResultStartFormat + i + hour + ConcatSymbol + Speed * i + KMS;
                     }
                     else
                     {
-                        result = "Distance after " + i + " hours " + speed * i + "km";
+                        result = ResultStartFormat + i + hours + ConcatSymbol + Speed * i + KMS;
                     }
                 }
-                else if(unitSelected == 1)
+                else if (unitSelected == (int)DistancUnit.MS)
                 {
-                        result = "Distance after " + i*(secInHour) + " seconds " + (speed * i)*(kmInMeters) + "meters";
-                }else if (unitSelected == 2)
+                    result = ResultStartFormat + i * (secInHour) + seconds + ConcatSymbol + (Speed * i) * (kmInMeters) + Meters;
+                }
+                else if (unitSelected == (int)DistancUnit.MILESH)
                 {
                     if (i == 1)
                     {
-                        result = "Distance after " + i + " hour " + Math.Round((speed * i)*(kmToMilesFactor),2) + "Miles";
+                        result = ResultStartFormat + i + hour + ConcatSymbol + Math.Round((Speed * i) * (kmToMilesFactor), roundingDigit) + Miles;
                     }
                     else
                     {
-                        result = "Distance after " + i + " hours " + Math.Round((speed * i) * (kmToMilesFactor), 2) + "Miles";
+                        result = ResultStartFormat + i + hours + ConcatSymbol + Math.Round((Speed * i) * (kmToMilesFactor), roundingDigit) + Miles;
                     }
                 }
                 Distances.Add(result);

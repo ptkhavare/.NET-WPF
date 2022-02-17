@@ -11,9 +11,9 @@ namespace DistanceCalculator
 
         enum DistancUnit
         {
-           KMH,
-           MS,
-           MILESH
+            KMH,
+            MS,
+            MILESH
         }
 
         public MainWindow()
@@ -25,21 +25,25 @@ namespace DistanceCalculator
 
         public void CalculateDistance(object sender, RoutedEventArgs e)
         {
-
+            if (distanceLogicManager.Speed <= 0 || distanceLogicManager.Time < 0)
+            {
+                MessageBox.Show("Please Enter Speed and Time greater than 0");
+                return;
+            }
             int unitSelected = -1;
             if (KMRd.IsChecked == true)
             {
                 unitSelected = (int)DistancUnit.KMH;
             }
-            else if(MetersRd.IsChecked == true)
+            else if (MetersRd.IsChecked == true)
             {
                 unitSelected = (int)DistancUnit.MS;
             }
-            else if (MilesRd.IsChecked == true) {
+            else if (MilesRd.IsChecked == true)
+            {
                 unitSelected = (int)DistancUnit.MILESH;
             }
             distanceLogicManager.CalcDistance(unitSelected);
-
         }
     }
 }
