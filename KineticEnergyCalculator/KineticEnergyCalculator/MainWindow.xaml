@@ -1,0 +1,55 @@
+﻿<Window x:Class="KineticEnergyCalculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KineticEnergyCalculator"
+        mc:Ignorable="d"
+        Title="Kinetic Energy Calculator" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <SolidColorBrush Color="Black"></SolidColorBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Label Name="headingLabel" Foreground="White" Content="Kinetic Energy Calculator" 
+               Grid.Row="0" Grid.ColumnSpan="3" Margin="5" FontSize="35" 
+               HorizontalContentAlignment="Center" VerticalContentAlignment="Center" ></Label>
+        <Label Name="formulaLabel" Foreground="White" Content="KE = 1/2*(mv)^2" 
+               Grid.Row="1" Grid.ColumnSpan="3" Margin="5" FontSize="35" 
+               HorizontalContentAlignment="Center" VerticalContentAlignment="Center" ></Label>
+        <Label Name="massLabel" Foreground="White" Content="Enter Mass" 
+               Grid.Row="2" Grid.Column="0" Margin="5" FontSize="35" 
+               HorizontalContentAlignment="Center" VerticalContentAlignment="Center" ></Label>
+        <Label Name="velocityLabel" Foreground="White" Content="Enter Velocity" 
+               Grid.Row="3" Grid.Column="0" Margin="5" FontSize="35" 
+               HorizontalContentAlignment="Center" VerticalContentAlignment="Center" ></Label>
+        <TextBox Name="massValue" Text="{Binding Mass}" HorizontalContentAlignment="Right" 
+                 VerticalAlignment="Center" HorizontalAlignment="Center" 
+                 FontSize="40" Grid.Row="2" Grid.Column="2" Width="180"></TextBox>
+        <TextBox Name="velocityValue" Text="{Binding Velocity}" HorizontalContentAlignment="Right" 
+                 VerticalAlignment="Center" HorizontalAlignment="Center" 
+                 FontSize="40" Grid.Row="3" Grid.Column="2" Width="180"></TextBox>
+        <Button Name="calcEnergy" Background="Green" Content="Calculate" 
+                Grid.Row="4" Grid.ColumnSpan="3" FontSize="35" Width="300" Height="50" 
+                Click="CalculateKineticEnergy" HorizontalContentAlignment="Center" />
+        <Label Name="resultLabel" Foreground="White" Content="{Binding Result, Mode=TwoWay}" 
+               Grid.Row="5" Grid.ColumnSpan="2" Margin="5" FontSize="35" 
+               HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
+        <Label Name="validationLabel" Foreground="White" Content="{Binding Validation, Mode=TwoWay}" 
+               Grid.Row="6" Grid.ColumnSpan="2" Margin="5" FontSize="35" 
+               HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
+    </Grid>
+    
+</Window>
