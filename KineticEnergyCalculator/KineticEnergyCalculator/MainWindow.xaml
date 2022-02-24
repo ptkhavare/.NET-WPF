@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:KineticEnergyCalculator"
         mc:Ignorable="d"
-        Title="Kinetic Energy Calculator" Height="450" Width="800">
+        Title="Kinetic Energy Calculator" Height="600" Width="800" ResizeMode="NoResize">
     <Grid>
         <Grid.Background>
             <SolidColorBrush Color="Black"></SolidColorBrush>
@@ -26,14 +26,15 @@
         <Label Name="headingLabel" Foreground="White" Content="Kinetic Energy Calculator" 
                Grid.Row="0" Grid.ColumnSpan="3" Margin="5" FontSize="35" 
                HorizontalContentAlignment="Center" VerticalContentAlignment="Center" ></Label>
-        <Label Name="formulaLabel" Foreground="White" Content="KE = 1/2*(mv)^2" 
-               Grid.Row="1" Grid.ColumnSpan="3" Margin="5" FontSize="35" 
+        <TextBlock FontSize="35"  Grid.Row="1" Grid.ColumnSpan="3" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Run>Kinetic Energy - &#189;mv</Run>
+            <Run Typography.Variants="Superscript">2</Run>
+        </TextBlock>
+        <Label Name="massLabel" Foreground="White" Content="Enter Mass (Kilograms)" 
+               Grid.Row="2" Grid.Column="0" Margin="5" FontSize="25" 
                HorizontalContentAlignment="Center" VerticalContentAlignment="Center" ></Label>
-        <Label Name="massLabel" Foreground="White" Content="Enter Mass" 
-               Grid.Row="2" Grid.Column="0" Margin="5" FontSize="35" 
-               HorizontalContentAlignment="Center" VerticalContentAlignment="Center" ></Label>
-        <Label Name="velocityLabel" Foreground="White" Content="Enter Velocity" 
-               Grid.Row="3" Grid.Column="0" Margin="5" FontSize="35" 
+        <Label Name="velocityLabel" Foreground="White" Content="Enter Velocity (Meters/Seconds)" 
+               Grid.Row="3" Grid.Column="0" Margin="5" FontSize="25" 
                HorizontalContentAlignment="Center" VerticalContentAlignment="Center" ></Label>
         <TextBox Name="massValue" Text="{Binding Mass}" HorizontalContentAlignment="Right" 
                  VerticalAlignment="Center" HorizontalAlignment="Center" 
@@ -44,16 +45,19 @@
         <Button Name="calcEnergy" Background="Green" Content="Calculate" 
                 Grid.Row="4" Grid.ColumnSpan="3" FontSize="35" Width="300" Height="50" 
                 Click="CalculateKineticEnergy" HorizontalContentAlignment="Center" />
-        <ComboBox Grid.Row="5" Grid.Column="0"
+        <ComboBox Name="cbUnits" Grid.Row="5" Grid.Column="0"
                   SelectedValue="{Binding SelectedEnergyUnit,Mode=TwoWay}" FontSize="35">
-            <ComboBoxItem Name="Jules" IsSelected="True" HorizontalContentAlignment="right">Jules</ComboBoxItem>
-            <ComboBoxItem Name="Calories" HorizontalContentAlignment="right">Calories</ComboBoxItem>
+            <ComboBoxItem IsEnabled="False" Foreground="Black">Select Unit</ComboBoxItem>
+            <ComboBoxItem Name="Joules" HorizontalContentAlignment="right"> Joules</ComboBoxItem>
+            <ComboBoxItem Name="MegaJoules" HorizontalContentAlignment="right"> MegaJoules</ComboBoxItem>
+            <ComboBoxItem Name="Calories"   HorizontalContentAlignment="right"> Calories</ComboBoxItem>
+            <ComboBoxItem Name="BTU"   HorizontalContentAlignment="right"> BTU</ComboBoxItem>
         </ComboBox>
 
         <Label Name="resultLabel" Foreground="White" Content="{Binding Result, Mode=TwoWay}" 
                Grid.Row="5" Grid.Column="1" Margin="5" FontSize="35" 
-               HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
-        <Label Name="validationLabel" Foreground="White" Content="{Binding Validation, Mode=TwoWay}" 
+               HorizontalContentAlignment="Center" VerticalContentAlignment="Center" ContentStringFormat="n0"></Label>
+        <Label Name="validationLabel" Foreground="Red" Content="{Binding Validation, Mode=TwoWay}" 
                Grid.Row="6" Grid.ColumnSpan="2" Margin="5" FontSize="35" 
                HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
     </Grid>

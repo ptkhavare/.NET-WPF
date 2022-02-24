@@ -26,6 +26,7 @@ namespace KineticEnergyCalculator
 
         public void CalculateKineticEnergy(object sender, RoutedEventArgs e)
         {
+            cbUnits.SelectedValue = 0 ;
             kinecticEnergyManager.calcKE();
         }
 
