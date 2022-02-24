@@ -17,7 +17,7 @@ namespace KineticEnergyCalculator
 {
     public partial class MainWindow : Window
     {
-        KinecticEnergyManager kinecticEnergyManager = new KinecticEnergyManager();
+        KinecticEnergyManager kinecticEnergyManager = new();
         public MainWindow()
         {
             InitializeComponent();
@@ -26,7 +26,6 @@ namespace KineticEnergyCalculator
 
         public void CalculateKineticEnergy(object sender, RoutedEventArgs e)
         {
-            cbUnits.SelectedValue = 0 ;
             kinecticEnergyManager.calcKE();
         }
 

@@ -83,6 +83,8 @@ namespace KineticEnergyCalculator
         #region logic
         public void calcKE()
         {
+            SelectedEnergyUnit = null;
+            Validation = "";
             (bool isValid, double ke) = CalcKineticEnergy(Mass, Velocity);
             if (isValid)
             {
@@ -94,6 +96,7 @@ namespace KineticEnergyCalculator
                 Validation = "Mass and Velocity should be greater than 0";
                 KineticEnergyInJoules = 0;
                 Result = "";
+                
             }
         }
         private (bool, double) CalcKineticEnergy(double Mass, double Velocity)
@@ -110,19 +113,19 @@ namespace KineticEnergyCalculator
 
         private void ConvertUnit()
         {
-            if (SelectedEnergyUnit.Name == megaJoules)
+            if (SelectedEnergyUnit!= null && SelectedEnergyUnit.Name == megaJoules)
             {
                 Result = Math.Round((KineticEnergyInJoules / joulesToMegaJoules), roundingDigit).ToString() + (megaJoulesUnit);
             }
-            else if (SelectedEnergyUnit.Name == joules)
+            else if (SelectedEnergyUnit != null && SelectedEnergyUnit.Name == joules)
             {
                 Result = Math.Round(KineticEnergyInJoules, roundingDigit).ToString() + (joulesUnit);
             }
-            else if (SelectedEnergyUnit.Name == calories)
+            else if (SelectedEnergyUnit != null && SelectedEnergyUnit.Name == calories)
             {
                 Result = Math.Round((KineticEnergyInJoules * joulesToCalories), roundingDigit).ToString() + (caloriesUnit);
             }
-            else if (SelectedEnergyUnit.Name == btu)
+            else if (SelectedEnergyUnit != null && SelectedEnergyUnit.Name == btu)
             {
                 Result = Math.Round((KineticEnergyInJoules * joulesToBTU), roundingDigit).ToString() + (btuUnit);
             }

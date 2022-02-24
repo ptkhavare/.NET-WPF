@@ -47,7 +47,7 @@
                 Click="CalculateKineticEnergy" HorizontalContentAlignment="Center" />
         <ComboBox Name="cbUnits" Grid.Row="5" Grid.Column="0"
                   SelectedValue="{Binding SelectedEnergyUnit,Mode=TwoWay}" FontSize="35">
-            <ComboBoxItem IsEnabled="False" Foreground="Black">Select Unit</ComboBoxItem>
+            <ComboBoxItem IsEnabled="False" IsSelected="True" Foreground="Black">Select Unit</ComboBoxItem>
             <ComboBoxItem Name="Joules" HorizontalContentAlignment="right"> Joules</ComboBoxItem>
             <ComboBoxItem Name="MegaJoules" HorizontalContentAlignment="right"> MegaJoules</ComboBoxItem>
             <ComboBoxItem Name="Calories"   HorizontalContentAlignment="right"> Calories</ComboBoxItem>
