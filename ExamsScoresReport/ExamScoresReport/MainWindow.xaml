@@ -5,23 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ExamScoresReport"
         mc:Ignorable="d"
-        Title="Exam Score Analyser" Height="800" Width="800">
+        Title="Exam Score Analyser" Height="800" Width="600" ResizeMode="NoResize">
     <Grid Name="Main">
         <Grid.Background>
             <SolidColorBrush Color="Black"></SolidColorBrush>
         </Grid.Background>
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="5*"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="2*"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height=".5*"></RowDefinition>
+            <RowDefinition Height="3*"></RowDefinition>
+            <RowDefinition Height=".7*"></RowDefinition>
+            <RowDefinition Height="3*"></RowDefinition>
+            <RowDefinition Height=".3*"></RowDefinition>
         </Grid.RowDefinitions>
         <Label Content="Exam Score Analyser" Foreground="White" HorizontalContentAlignment="Center" 
                VerticalContentAlignment="Center" FontSize="30"></Label>
         <Grid Grid.Row="1" Name="Scores">
             <Grid.RowDefinitions>
-                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height=".5*"></RowDefinition>
                 <RowDefinition Height="4*"></RowDefinition>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
@@ -31,7 +31,7 @@
             </Grid.ColumnDefinitions>
 
             <Label  Grid.Row="0" Grid.Column="0" Content="Section 1" Foreground="White" HorizontalContentAlignment="Center" 
-               VerticalContentAlignment="Center" FontSize="15"></Label>
+               VerticalContentAlignment="Center" FontSize="20"></Label>
             <ListBox Grid.Row="1"  Grid.Column="0" Margin="10" ItemsSource="{Binding studentScoresSection1}" 
                      Background="Black" Foreground="White">
                 <ListBox.ItemTemplate>
@@ -43,18 +43,16 @@
                                 <ColumnDefinition/>
                             </Grid.ColumnDefinitions>
                             <Label Grid.Column="0" Content="{Binding RollNum}" Foreground="White" 
-                                   HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20"></Label>
+                                   HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="15"></Label>
                             <Label Grid.Column="1" Content="{Binding Score}" Foreground="White" 
-                                   HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20"></Label>
-                            <!--<Label Grid.Column="2" Content="{Binding Section}" Foreground="White" 
-                                   HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20"></Label>-->
+                                   HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="15"></Label>
                         </Grid>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
 
             <Label  Grid.Row="0" Grid.Column="1" Content="Section 2" Foreground="White" HorizontalContentAlignment="Center" 
-               VerticalContentAlignment="Center" FontSize="15"></Label>
+               VerticalContentAlignment="Center" FontSize="20"></Label>
             <ListBox Grid.Row="1"  Grid.Column="1" Margin="10" ItemsSource="{Binding studentScoresSection2}" 
                      Background="Black" Foreground="White">
                 <ListBox.ItemTemplate>
@@ -65,16 +63,15 @@
                                 <ColumnDefinition Width="*"/>
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
-                            <Label Grid.Column="0" Content="{Binding RollNum}" Foreground="White" FontSize="20"></Label>
-                                <Label Grid.Column="1" Content="{Binding Score}" Foreground="White"  FontSize="20"></Label>
-                                <!--<Label Grid.Column="2" Content="{Binding Section}" Foreground="White"  FontSize="20"></Label>-->
+                            <Label Grid.Column="0" Content="{Binding RollNum}" Foreground="White" FontSize="15"></Label>
+                            <Label Grid.Column="1" Content="{Binding Score}" Foreground="White"  FontSize="15"></Label>
                         </Grid>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
 
             <Label  Grid.Row="0" Grid.Column="2" Content="Section 3" Foreground="White" HorizontalContentAlignment="Center" 
-               VerticalContentAlignment="Center" FontSize="15"></Label>
+               VerticalContentAlignment="Center" FontSize="20"></Label>
             <ListBox Grid.Row="1" Grid.Column="2" Margin="10" ItemsSource="{Binding studentScoresSection3}" 
                      Background="Black" Foreground="White">
                 <ListBox.ItemTemplate>
@@ -85,16 +82,85 @@
                                 <ColumnDefinition/>
                                 <ColumnDefinition/>
                             </Grid.ColumnDefinitions>
-                            <Label Grid.Column="0" Content="{Binding RollNum}" Foreground="White" FontSize="20"></Label>
-                            <Label Grid.Column="1" Content="{Binding Score}" Foreground="White" FontSize="20"></Label>
-                            <!--<Label Grid.Column="2" Content="{Binding Section}" Foreground="White" FontSize="20"></Label>-->
+                            <Label Grid.Column="0" Content="{Binding RollNum}" Foreground="White" FontSize="15"></Label>
+                            <Label Grid.Column="1" Content="{Binding Score}" Foreground="White" FontSize="15"></Label>
                         </Grid>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
         </Grid>
-        
-        <Button Grid.Row="2" Margin="10" Content="Generate Report" FontSize="20" Click="GenerateReport"></Button>
-        <Label Grid.Row="4" Content="{Binding Validation}" Foreground="White" FontSize="35" ></Label>
+        <Button Grid.Row="2" Margin="10" Content="Generate Report" FontSize="20" Click="GenerateReport" Foreground="Black" Background="Green"></Button>
+        <Grid Grid.Row="3" x:Name="Result" Visibility="{Binding ResutlVisibility}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height=".3*"></RowDefinition>
+                <RowDefinition Height=".3*"></RowDefinition>
+                <RowDefinition Height=".3*"></RowDefinition>
+                <RowDefinition Height=".3*"></RowDefinition>
+                <RowDefinition Height=".3*"></RowDefinition>
+                <RowDefinition Height=".3*"></RowDefinition>
+                <RowDefinition Height=".3*"></RowDefinition>
+                <RowDefinition Height=".3*"></RowDefinition>
+                <RowDefinition Height=".3*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label Content="Average" Foreground="White" Grid.Row="0" HorizontalContentAlignment="Center"
+                   VerticalContentAlignment="Center" FontSize="15" Grid.ColumnSpan="3"></Label>
+
+            <Label Content="Section 1" Foreground="White" Grid.Row="1" HorizontalContentAlignment="Center"
+                   VerticalContentAlignment="Center" FontSize="15" Grid.Column="0"></Label>
+            <Label Content="Section 2" Foreground="White" Grid.Row="1" HorizontalContentAlignment="Center"
+                   VerticalContentAlignment="Center" FontSize="15" Grid.Column="1"></Label>
+            <Label Content="Section 3" Foreground="White" Grid.Row="1" HorizontalContentAlignment="Center"
+                   VerticalContentAlignment="Center" FontSize="15" Grid.Column="2"></Label>
+
+            <Label Content="{Binding Sec1Avg}" Foreground="White" Grid.Row="2" HorizontalContentAlignment="Center"
+                   VerticalContentAlignment="Center" FontSize="15" Grid.Column="0"></Label>
+            <Label Content="{Binding Sec2Avg}" Foreground="White" Grid.Row="2" HorizontalContentAlignment="Center"
+                   VerticalContentAlignment="Center" FontSize="15" Grid.Column="1"></Label>
+            <Label Content="{Binding Sec3Avg}" Foreground="White" Grid.Row="2" HorizontalContentAlignment="Center"
+                   VerticalContentAlignment="Center" FontSize="15" Grid.Column="2"></Label>
+
+            <Label Content="Class Average " Foreground="White" Grid.Row="3" HorizontalContentAlignment="Center"
+                   VerticalContentAlignment="Center" FontSize="15" Grid.Column="1" Grid.ColumnSpan="1"/>
+            <Label Content="{Binding AllSectionAvg}" Foreground="White" Grid.Row="3" HorizontalContentAlignment="Left"
+                   VerticalContentAlignment="Center" FontSize="15" Grid.Column="2"></Label>
+
+            <Label Content="Highest" Foreground="White" Grid.Row="4" HorizontalContentAlignment="Center"
+                   VerticalContentAlignment="Center" FontSize="15" Grid.Column="0"></Label>
+            <Label Content="{Binding Higehest}" Foreground="White" Grid.Row="4" HorizontalContentAlignment="Center"
+                   VerticalContentAlignment="Center" FontSize="15" Grid.Column="1"></Label>
+            <Label Content="{Binding HighestSection}" Foreground="White" Grid.Row="4" HorizontalContentAlignment="Center"
+                   VerticalContentAlignment="Center" FontSize="15" Grid.Column="2"></Label>
+
+            <Label Content="Lowest" Foreground="White" Grid.Row="5" HorizontalContentAlignment="Center"
+                   VerticalContentAlignment="Center" FontSize="15" Grid.Column="0"></Label>
+            <Label Content="{Binding Lowest}" Foreground="White" Grid.Row="5" HorizontalContentAlignment="Center"
+                   VerticalContentAlignment="Center" FontSize="15" Grid.Column="1"></Label>
+            <Label Content="{Binding LowestSection}" Foreground="White" Grid.Row="5" HorizontalContentAlignment="Center"
+                   VerticalContentAlignment="Center" FontSize="15" Grid.Column="2"></Label>
+
+            <Label Content="Above Average Students" Foreground="White" Grid.Row="6" HorizontalContentAlignment="Center"
+                   VerticalContentAlignment="Center" FontSize="15" Grid.ColumnSpan="3"></Label>
+
+            <Label Content="Section 1" Foreground="White" Grid.Row="7" HorizontalContentAlignment="Center"
+                   VerticalContentAlignment="Center" FontSize="15" Grid.Column="0"></Label>
+            <Label Content="Section 2" Foreground="White" Grid.Row="7" HorizontalContentAlignment="Center"
+                   VerticalContentAlignment="Center" FontSize="15" Grid.Column="1"></Label>
+            <Label Content="Section 3" Foreground="White" Grid.Row="7" HorizontalContentAlignment="Center"
+                   VerticalContentAlignment="Center" FontSize="15" Grid.Column="2"></Label>
+
+            <Label Content="{Binding Sec1AbvAvg}" Foreground="White" Grid.Row="8" HorizontalContentAlignment="Center"
+                   VerticalContentAlignment="Center" FontSize="15" Grid.Column="0"></Label>
+            <Label Content="{Binding Sec2AbvAvg}" Foreground="White" Grid.Row="8" HorizontalContentAlignment="Center"
+                   VerticalContentAlignment="Center" FontSize="15" Grid.Column="1"></Label>
+            <Label Content="{Binding Sec3AbvAvg}" Foreground="White" Grid.Row="8" HorizontalContentAlignment="Center"
+                   VerticalContentAlignment="Center" FontSize="15" Grid.Column="2"></Label>
+        </Grid>
+        <Label Grid.Row="4" Content="{Binding Validation}" Foreground="White" FontSize="15" 
+               HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="1" BorderBrush="AntiqueWhite"></Label>
     </Grid>
 </Window>

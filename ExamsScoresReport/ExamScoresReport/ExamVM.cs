@@ -2,19 +2,24 @@
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.IO;
+using System.Linq;
 using System.Runtime.CompilerServices;
+using System.Windows;
 
 namespace ExamScoresReport
 {
-
-
     internal class ExamVM : INotifyPropertyChanged
     {
         #region Const and Var
-        private const string filePath = "C:\\Users\\prana\\Workspace\\PROG8010\\ExamsScoresReport\\ExamScoresReport\\scores";
 
+        private const int maxMarks = 100;
+        private const string section = "Section ";
+        private const string rollNum = " Roll No. ";
 
-        private string validation = "No Errors Yet";
+        private static readonly string filePath = Environment.CurrentDirectory + "\\scores";
+        private static readonly int numOfFiles = Directory.GetFiles(filePath).Length;
+
+        StudentScore[][] studentScores = new StudentScore[numOfFiles][];
 
         private int sec1Avg = 0;
         private int sec2Avg = 0;
@@ -22,7 +27,21 @@ namespace ExamScoresReport
         private int allSectionAvg = 0;
         private int highest = 0;
         private int lowest = 0;
+        private int sec1AbvAvg = 0;
+        private int sec2AbvAvg = 0;
+        private int sec3AbvAvg = 0;
 
+        private string validation = "Files Not Read";
+        private string lowestSection = "";
+        private string highestSection = "";
+
+        private Visibility resutlVisibility = Visibility.Collapsed;
+
+        public Visibility ResutlVisibility
+        {
+            get { return resutlVisibility; }
+            set { resutlVisibility = value; NotifyPropertyChanged(); }
+        }
 
         public int Sec1Avg
         {
@@ -65,23 +84,49 @@ namespace ExamScoresReport
             get { return validation; }
             set { validation = value; NotifyPropertyChanged(); }
         }
-        #endregion
 
-        static int numOfFiles = Directory.GetFiles(filePath).Length;
+        public string HighestSection
+        {
+            get { return highestSection; }
+            set { highestSection = value; NotifyPropertyChanged(); }
+        }
+
+        public string LowestSection
+        {
+            get { return lowestSection; }
+            set { lowestSection = value; NotifyPropertyChanged(); }
+        }
+
+        public int Sec1AbvAvg
+        {
+            get { return sec1AbvAvg; }
+            set { sec1AbvAvg = value; NotifyPropertyChanged(); }
+        }
+
+        public int Sec2AbvAvg
+        {
+            get { return sec2AbvAvg; }
+            set { sec2AbvAvg = value; NotifyPropertyChanged(); }
+        }
+
+        public int Sec3AbvAvg
+        {
+            get { return sec3AbvAvg; }
+            set { sec3AbvAvg = value; NotifyPropertyChanged(); }
+        }
 
         public ObservableCollection<StudentScore> studentScoresSection1 { get; set; } = new ObservableCollection<StudentScore>();
         public ObservableCollection<StudentScore> studentScoresSection2 { get; set; } = new ObservableCollection<StudentScore>();
         public ObservableCollection<StudentScore> studentScoresSection3 { get; set; } = new ObservableCollection<StudentScore>();
+        #endregion
 
-        StudentScore[][] studentScores = new StudentScore[numOfFiles][];
-
+        #region constructors
         public ExamVM()
         {
             (bool isError, studentScores) = FilesToArray(filePath);
-
             if (!isError)
             {
-                ObservableCollection<StudentScore>[] ss = new ObservableCollection<StudentScore>[]
+                ObservableCollection<StudentScore>[] allSectionStudentScores = new ObservableCollection<StudentScore>[]
                                 { studentScoresSection1,
                               studentScoresSection2,
                               studentScoresSection3 };
@@ -89,40 +134,45 @@ namespace ExamScoresReport
                 {
                     for (int j = 0; j < studentScores[i].Length; j++)
                     {
-                        ss[i].Add(studentScores[i][j]);
+                        allSectionStudentScores[i].Add(studentScores[i][j]);
                     }
                 }
+                Validation = "Files Read Succesfully";
             }
             else
             {
                 Validation = "Error in Reading Files";
             }
         }
+        #endregion
 
+        #region main logic
         public void GenerateReport()
         {
-            
-
-           
-                Sec1Avg = CalculateAverage(studentScoresSection1);
-                Sec2Avg = CalculateAverage(studentScoresSection2);
-                Sec3Avg = CalculateAverage(studentScoresSection3);
-                AllSectionAvg = CalculateAllSectionAverage(studentScores);
-                (int[] highestvalue, int[] lowestValues) = CalculateHighestAndLowest(studentScores);
-           
-          
+            Sec1Avg = CalculateAverage(studentScoresSection1);
+            Sec2Avg = CalculateAverage(studentScoresSection2);
+            Sec3Avg = CalculateAverage(studentScoresSection3);
+            AllSectionAvg = CalculateAllSectionAverage(studentScores);
+            (StudentScore highestStudentScore,StudentScore lowestStudentScore) = CalculateHighestAndLowest(studentScores);
+            Higehest = highestStudentScore.Score;
+            Lowest = lowestStudentScore.Score;
+            HighestSection = section + highestStudentScore.Section + rollNum +highestStudentScore.RollNum;
+            LowestSection = section + lowestStudentScore.Section + rollNum +lowestStudentScore.RollNum;
+            Sec1AbvAvg = CalculateAboveAverageStudents(AllSectionAvg, studentScoresSection1);
+            Sec2AbvAvg = CalculateAboveAverageStudents(AllSectionAvg, studentScoresSection2);
+            Sec3AbvAvg = CalculateAboveAverageStudents(AllSectionAvg, studentScoresSection3);
+            Validation = "Report Generated Succesfully";
+            ResutlVisibility = Visibility.Visible;
         }
+        #endregion
 
-
+        #region helper logic
         public int CalculateAverage(ObservableCollection<StudentScore> studentScoresSection)
         {
             int total = 0;
             if (studentScoresSection1.Count > 0)
             {
-                foreach (StudentScore studentScore in studentScoresSection)
-                {
-                    total += studentScore.Score;
-                }
+                total = studentScoresSection.Sum(element => element.Score);
                 return total / studentScoresSection.Count;
             }
             return 0;
@@ -130,54 +180,61 @@ namespace ExamScoresReport
 
         public int CalculateAllSectionAverage(StudentScore[][] studentScores)
         {
-            int total = 0;
-            int totalCount = 0;
+            if (studentScores.Length > 0)
+            {
+                int total = 0;
+                int totalCount = 0;
+                for (int i = 0; i < studentScores.Length; i++)
+                {
+                    total += studentScores[i].Sum(element => element.Score);
+                    totalCount += studentScores[i].Length;
+                }
+                return total / totalCount;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+
+        public (StudentScore highestStudentScore, StudentScore lowestStudentScore) CalculateHighestAndLowest(StudentScore[][] studentScores)
+        {
+            StudentScore highestStudentScore = new StudentScore();
+            StudentScore lowestStudentScore = new StudentScore();
+            int lowest = maxMarks;
+            int highest = 0;
+
             for (int i = 0; i < studentScores.Length; i++)
             {
                 for (int j = 0; j < studentScores[i].Length; j++)
                 {
                     if (studentScores[i][j].Score > highest)
                     {
-                        total += studentScores[i][j].Score;
+                        highest = studentScores[i][j].Score;
+                        highestStudentScore = studentScores[i][j];
                     }
                 }
             }
             for (int i = 0; i < studentScores.Length; i++)
             {
-                totalCount += studentScores[i].Length;
+                for (int j = 0; j < studentScores[i].Length; j++)
+                {
+                    if (studentScores[i][j].Score < lowest)
+                    {
+                        lowest = studentScores[i][j].Score;
+                        lowestStudentScore = studentScores[i][j];
+                    }
+                }
             }
-            return total / totalCount;
+            return (highestStudentScore, lowestStudentScore);
         }
 
-        public (int[], int[]) CalculateHighestAndLowest(StudentScore[][] studentScores)
+        public int CalculateAboveAverageStudents(int classAverage, ObservableCollection<StudentScore> studentScoresSection)
         {
-            int[] highest = new int[2];
-            int[] lowest = new int[2];
-            lowest[0] = 100;
-
-            for (int i = 0; i < studentScores.Length; i++)
-            {
-                for (int j = 0; j < studentScores[i].Length; j++)
-                {
-                    if (studentScores[i][j].Score > highest[0])
-                    {
-                        highest[0] = studentScores[i][j].Score;
-                        highest[1] = studentScores[i][j].Section;
-                    }
-                }
-            }
-            for (int i = 0; i < studentScores.Length; i++)
-            {
-                for (int j = 0; j < studentScores[i].Length; j++)
-                {
-                    if (studentScores[i][j].Score < lowest[0])
-                    {
-                        lowest[0] = studentScores[i][j].Score;
-                        lowest[1] = studentScores[i][j].Section;
-                    }
-                }
-            }
-            return (highest, lowest);
+            int num = 0;
+            if (studentScoresSection.Count > 0)
+                return studentScoresSection.Count(e => e.Score > classAverage);
+            return num;
         }
 
 
@@ -206,6 +263,7 @@ namespace ExamScoresReport
             }
             return (false, studentScores);
         }
+        #endregion
 
         #region Property Changed
         public event PropertyChangedEventHandler? PropertyChanged;

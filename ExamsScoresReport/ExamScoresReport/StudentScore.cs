@@ -2,19 +2,8 @@
 
 namespace ExamScoresReport
 {
-
-
     internal class StudentScore
     {
-
-
-        public StudentScore(long rollNum, string score, int section)
-        {
-            this.rollNum = rollNum + 1;
-            this.score = Int32.Parse(score);
-            this.section = section + 1;
-        }
-
         private long rollNum;
         private int score;
         private int section;
@@ -37,5 +26,14 @@ namespace ExamScoresReport
             set { score = value; }
         }
 
+        public StudentScore()
+        {
+        }
+        public StudentScore(long rollNum, string score, int section)
+        {
+            this.rollNum = rollNum + 1;
+            this.score = Int32.Parse(score);
+            this.section = section + 1;
+        }
     }
 }
