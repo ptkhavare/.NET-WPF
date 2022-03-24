@@ -1,0 +1,137 @@
+﻿<Window x:Class="CarGame.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CarGame"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="750" Width="800">
+    <Grid>
+        <Grid.Background>
+            <SolidColorBrush Color="Black">
+                
+            </SolidColorBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".7*"></RowDefinition>
+            <RowDefinition Height=".7*"></RowDefinition>
+            <RowDefinition Height=".7*"></RowDefinition>
+            <RowDefinition Height=".7*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="5*"></RowDefinition>
+            <RowDefinition Height=".7*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <!--<Image Visibility="Visible" Grid.ColumnSpan="4" Grid.RowSpan="5"
+               Source="images/bg.jpg" Stretch="Fill" ></Image>-->
+        <Label Name="titleLabel" Content="DRAG Racing Game" Grid.Row="0"  Grid.ColumnSpan="4" 
+               FontSize="25" 
+               HorizontalContentAlignment="Center" VerticalContentAlignment="Center" 
+               Foreground="White">
+        </Label>
+
+        <RadioButton GroupName="player" Name="playerOne" Grid.Row="1" Grid.Column="0"
+                     Grid.ColumnSpan="2" 
+                     Content="Player One" Foreground="White"
+                     FontSize="25"  IsChecked="{Binding PlayerOneSelected}"                    
+                     HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                     HorizontalAlignment="Center" VerticalAlignment="Center">
+        </RadioButton>
+        <RadioButton GroupName="player" Name="playerTwo" Grid.Row="1" Grid.Column="2"
+                     Grid.ColumnSpan="2" 
+                     Content="Player Two" Foreground="White"
+                     IsEnabled="False"
+                     FontSize="25" IsChecked="{Binding PlayerTwoSelected}"
+                     HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                     HorizontalAlignment="Center" VerticalAlignment="Center">
+        </RadioButton>
+        <Button x:Name="playerOneStart" Grid.Row="2" Grid.Column="0" Content="Start" 
+                Margin="10" Click="Start_Timer1" FontSize="20"></Button>
+        <Label Name="playerOneTimer" Grid.Row="2" Foreground="White" 
+               Content="Player One Timer" Grid.Column="1" 
+               FontSize="20"
+               VerticalContentAlignment="Center" HorizontalContentAlignment="Center"> 
+        </Label>
+        <Button x:Name="playerTwoStart" Grid.Row="2" Grid.Column="2" Content="Start" 
+                Margin="10" FontSize="20" Click="Start_Timer2"></Button>
+        <Label Name="playerTwoTimer" Grid.Row="2" Foreground="White" 
+               Content="Player Two Timer" Grid.Column="3" 
+               FontSize="20"
+               VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
+        </Label>
+
+
+
+
+        <Label Name="carGear1" Content="{Binding SelectedCar.CarGear}" Grid.Row="3" 
+               Grid.Column="2" 
+               Grid.ColumnSpan="2" 
+               FontSize="30" Foreground="White"
+               HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
+        <Label Name="carSpeed1" Content="{Binding SelectedCar.Speed}" Grid.Row="3"  
+               Grid.Column="0" 
+               Grid.ColumnSpan="2" 
+               FontSize="30" Foreground="White"
+               HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
+
+
+        <Button Name="accelarateBtn" Grid.Column="0" Content="ACCELARATE" HorizontalAlignment="Center"  
+                Grid.Row="4"  
+                VerticalAlignment="Center" FontSize="30" Click="Accelarate_Click" />
+        <Button Name="brakeBtn" Content="BRAKE" HorizontalAlignment="Center" Grid.Row="4" 
+                VerticalAlignment="Center" FontSize="30" Click="Brake_Click" 
+                Grid.Column="1" />
+
+
+        <Button Grid.Column="2" Content="UP" HorizontalAlignment="Center"  Grid.Row="3" 
+                VerticalAlignment="Top" FontSize="20" Click="GearUP_Click" Grid.RowSpan="2" 
+                Grid.ColumnSpan="2" Margin="0,54,0,0" Width="306" />
+        <Button Grid.Column="2" Content="DOWN" HorizontalAlignment="Center"  Grid.Row="4" 
+                VerticalAlignment="Top"  FontSize="20" Click="GearDOWN_Click" Grid.ColumnSpan="2" 
+                Margin="0,48,0,0" Grid.RowSpan="2" Width="306"/>
+
+
+        <TextBlock Grid.Row="5"
+                   TextWrapping="Wrap"
+                   FontSize="20"
+                   Grid.ColumnSpan="4"
+                   Margin="20"
+                   Foreground="Aqua">
+            <Run>Instructions : </Run>
+            <LineBreak></LineBreak>
+            <Run>1. Accelarte - Increase Car speed by 5</Run>
+            <LineBreak></LineBreak>
+            <Run>2. Brake - Decrease Car speed by 1</Run>
+            <LineBreak></LineBreak>
+            <Run>3. UP - Shift Gear up by 1</Run>
+            <LineBreak></LineBreak>
+            <Run>4. DOWN - Shift Gear down by 1</Run>
+            <LineBreak></LineBreak>
+            <LineBreak></LineBreak>
+            <Run>Gear Mechanics - </Run>
+            <LineBreak></LineBreak>
+            <Run> N - Speed required to change gear - 0</Run>
+            <LineBreak></LineBreak>
+            <Run> 1 - Speed required to change gear - 10</Run>
+            <LineBreak></LineBreak>
+            <Run> 2 - Speed required to change gear - 20</Run>
+            <LineBreak></LineBreak>
+            <Run> 3 - Speed required to change gear - 30</Run>
+            <LineBreak></LineBreak>
+            <Run> 4 - Speed required to change gear - 40</Run>
+            <LineBreak></LineBreak>
+        </TextBlock>
+        <Label Name="result" Content="" Grid.Row="6"  
+               Grid.Column="0" 
+               Grid.ColumnSpan="4" 
+               FontSize="30" Foreground="White"
+               HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
+
+
+    </Grid>
+</Window>
