@@ -29,6 +29,9 @@ namespace CarGame
         private const int thirdGearMaxSpeed = 45;
         private const int fouthearMaxSpeed = 60;
 
+        private const int initialSpeed = 0;
+        private const int gearStep = 1;
+
         private int year;
         private string make;
         private int speed;
@@ -57,7 +60,7 @@ namespace CarGame
                 }
                 else
                 {
-                    speed = 0;
+                    speed = initialSpeed;
                 };
                 NotifyPropertyChanged();
             }
@@ -74,7 +77,7 @@ namespace CarGame
         {
             this.year = year;
             this.make = make;
-            this.speed = 0;
+            this.speed = initialSpeed;
             this.carGear = Gear.NEUTRAL;
         }
 
@@ -82,7 +85,7 @@ namespace CarGame
         {
             if (this.CarGear == Gear.NEUTRAL)
             {
-                this.Speed = 0;
+                this.Speed = initialSpeed;
             }
             else if (this.CarGear == Gear.FIRST && this.Speed < firstGearMaxSpeed)
             {
@@ -115,31 +118,31 @@ namespace CarGame
         {
             if (this.CarGear == Gear.NEUTRAL)
             {
-                this.CarGear += 1;
+                this.CarGear += gearStep;
             }
             else if (this.CarGear == Gear.FIRST && this.Speed == firstGearSpeedChange)
             {
-                this.CarGear += 1;
+                this.CarGear += gearStep;
             }
             else if (this.CarGear == Gear.SECOND && this.Speed == secondGearSpeedChange)
             {
-                this.CarGear += 1;
+                this.CarGear += gearStep;
             }
             else if (this.CarGear == Gear.THIRD && this.Speed == thirdGearSpeedChange)
             {
-                this.CarGear += 1;
+                this.CarGear += gearStep;
             }
             else if (this.CarGear == Gear.FOURTH && this.Speed == fourthGearSpeedChange)
             {
-                this.CarGear += 1;
+                this.CarGear += gearStep;
             }
         }
 
         public void gearDown()
         {
-            if (this.CarGear > 0)
+            if (this.CarGear > Gear.NEUTRAL)
             {
-                this.CarGear -= 1;
+                this.CarGear -= gearStep;
             }
             else
             {

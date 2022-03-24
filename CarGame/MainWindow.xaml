@@ -88,10 +88,10 @@
                 Grid.Column="1" />
 
 
-        <Button Grid.Column="2" Content="UP" HorizontalAlignment="Center"  Grid.Row="3" 
+        <Button Name="GearUP" Grid.Column="2" Content="UP" HorizontalAlignment="Center"  Grid.Row="3" 
                 VerticalAlignment="Top" FontSize="20" Click="GearUP_Click" Grid.RowSpan="2" 
                 Grid.ColumnSpan="2" Margin="0,54,0,0" Width="306" />
-        <Button Grid.Column="2" Content="DOWN" HorizontalAlignment="Center"  Grid.Row="4" 
+        <Button Name="GearDOWN" Grid.Column="2" Content="DOWN" HorizontalAlignment="Center"  Grid.Row="4" 
                 VerticalAlignment="Top"  FontSize="20" Click="GearDOWN_Click" Grid.ColumnSpan="2" 
                 Margin="0,48,0,0" Grid.RowSpan="2" Width="306"/>
 
@@ -126,10 +126,11 @@
             <Run> 4 - Speed required to change gear - 40</Run>
             <LineBreak></LineBreak>
         </TextBlock>
-        <Label Name="result" Content="" Grid.Row="6"  
+        <Label Name="result" 
+               Content="" Grid.Row="6"  
                Grid.Column="0" 
                Grid.ColumnSpan="4" 
-               FontSize="30" Foreground="White"
+               FontSize="30" Foreground="Green"
                HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
 
 

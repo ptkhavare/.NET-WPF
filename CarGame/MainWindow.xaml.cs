@@ -4,9 +4,6 @@ using System.Windows.Threading;
 
 namespace CarGame
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         readonly VM vm = new();
@@ -79,11 +76,11 @@ namespace CarGame
 
                 else if (vm.playerOneCar.Speed > vm.playerTwoCar.Speed)
                 {
-                    result.Content = "Player One won the race";
+                    result.Content = "Player One won the race with a top speed of " + vm.playerOneCar.Speed;
                 }
                 else
                 {
-                    result.Content = "Player Two won the race";
+                    result.Content = "Player Two won the race with a top speed of " + vm.playerTwoCar.Speed;
                 }
             }
         }
