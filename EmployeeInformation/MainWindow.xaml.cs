@@ -52,5 +52,11 @@ namespace EmployeeInformation
         {
             vm.Delete();
         }
+
+        private void Search()
+        {
+           //todo 
+           // vm.Search();
+        }
     }
 }

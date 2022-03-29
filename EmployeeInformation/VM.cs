@@ -80,6 +80,7 @@ namespace EmployeeInformation
         }
 
 
+
         private void updateEmployees()
         {
             employees = db.Get();
@@ -91,6 +92,17 @@ namespace EmployeeInformation
                 Employees.Add(employee);
             }
         }
+        public void Search(string searchKey)
+        {
+            employees = db.SearchResult(searchKey);
+            employees = employees.OrderBy(employee => employee.EmployeeID).ToList();
+            Employees.Clear();
+            foreach (Employee employee in employees)
+            {
+                Employees.Add(employee);
+            }
+        }
+
 
         #endregion
 

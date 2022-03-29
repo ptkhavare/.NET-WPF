@@ -36,6 +36,12 @@ namespace EmployeeInformation
             "*" +
             "FROM Employee";
 
+        const string SEARCH_COMMAND =
+            "SELECT " +
+            " * " +
+            "FROM Employee " +
+            "WHERE Name like \"%@SEARCHKEY%\" ";
+
         private readonly SqlConnection conn;
 
         private static DB db;
@@ -102,5 +108,26 @@ namespace EmployeeInformation
             return employees;
         }
 
+        public List<Employee> SearchResult(string searchKey)
+        {
+            List<Employee> employees = new List<Employee>();
+
+            using SqlCommand cmd = new SqlCommand(SEARCH_COMMAND, conn);
+            cmd.Parameters.AddWithValue("@SEARCHKEY", searchKey);
+
+            using SqlDataReader dr = cmd.ExecuteReader();
+
+            while (dr.Read())
+                employees.Add(new Employee
+                {
+                    EmployeeID = dr.GetInt32(dr.GetOrdinal("EmployeeID")),
+                    Name = dr.GetString(dr.GetOrdinal("Name")),
+                    Position = dr.IsDBNull(dr.GetOrdinal("Position")) ? null : (string?)dr.GetString(dr.GetOrdinal("Position")),
+                    PayPerHour = dr.IsDBNull(dr.GetOrdinal("PayPerHour")) ? null : (decimal?)dr.GetDecimal(dr.GetOrdinal("PayPerHour")),
+                    IsNew = false
+                });
+            dr.Close();
+            return employees;
+        } 
     }
 }

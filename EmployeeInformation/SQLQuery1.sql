@@ -71,5 +71,11 @@ VALUES
 VALUES
 	('Tom Araya',
 	'Software Developer',
-	35.00)
+	35.00);
 
+
+	SELECT * 
+	FROM 
+	Employee
+	WHERE 
+	Name like '%Pra%';
