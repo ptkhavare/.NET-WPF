@@ -15,6 +15,19 @@ namespace EmployeeInformation
 
         public BindingList<Employee> Employees { get; set; } = new BindingList<Employee>();
 
+        private string searchKey = string.Empty;
+
+        public string SearchKey
+        {
+            get { return searchKey; }
+            set
+            {
+                searchKey = value;
+                NotifyPropertyChanged();
+                Search(value);
+            }
+        }
+
         private Employee selectedEmployee;
 
         public Employee SelectedEmployee
@@ -22,6 +35,8 @@ namespace EmployeeInformation
             get { return selectedEmployee; }
             set { selectedEmployee = value; NotifyPropertyChanged(); }
         }
+
+
         #endregion
 
         #region singleton
@@ -44,7 +59,6 @@ namespace EmployeeInformation
         #endregion
 
         #region logic
-
         public void Save(Employee employee)
         {
             bool success = false;
@@ -79,8 +93,6 @@ namespace EmployeeInformation
             }
         }
 
-
-
         private void updateEmployees()
         {
             employees = db.Get();
@@ -102,14 +114,7 @@ namespace EmployeeInformation
                 Employees.Add(employee);
             }
         }
-
-
         #endregion
-
-
-
-
-
 
         #region Property Changed
         public event PropertyChangedEventHandler? PropertyChanged;

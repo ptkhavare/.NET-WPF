@@ -7,6 +7,10 @@
         mc:Ignorable="d"
         Title="Employee Information Portal" Height="450" Width="800">
     <Grid>
+        <Grid.Background>
+            <SolidColorBrush Color="#e9e6ff">
+            </SolidColorBrush>
+        </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
@@ -19,16 +23,17 @@
                VerticalContentAlignment="Center">
         </Label>
         <StackPanel Grid.Row="1" Orientation="Horizontal">
-        <Label Content="Search By Name" 
+        <Label Content="Search by Name" 
                Grid.Row="1" Margin="5" FontSize="25"
                HorizontalContentAlignment="Left"
                 >
         </Label>
-        <TextBox Text="" 
+        <TextBox Text="{Binding SearchKey, UpdateSourceTrigger=PropertyChanged}" 
                Grid.Row="1" Margin="5" FontSize="25"
-               HorizontalContentAlignment="Right"
+               HorizontalContentAlignment="Left"
                VerticalContentAlignment="Center"
-               MinWidth="580">
+               MinWidth="580"
+               >
         </TextBox>
         </StackPanel>
         <ListBox Grid.Row="2" ItemsSource="{Binding Employees}" 

@@ -37,10 +37,10 @@ namespace EmployeeInformation
             "FROM Employee";
 
         const string SEARCH_COMMAND =
-            "SELECT " +
-            " * " +
+            "SELECT" +
+            "*" +
             "FROM Employee " +
-            "WHERE Name like \"%@SEARCHKEY%\" ";
+            "WHERE Name like @SEARCHKEY ";
 
         private readonly SqlConnection conn;
 
@@ -113,7 +113,7 @@ namespace EmployeeInformation
             List<Employee> employees = new List<Employee>();
 
             using SqlCommand cmd = new SqlCommand(SEARCH_COMMAND, conn);
-            cmd.Parameters.AddWithValue("@SEARCHKEY", searchKey);
+            cmd.Parameters.AddWithValue("@SEARCHKEY", string.Format("%{0}%", searchKey.Trim()));
 
             using SqlDataReader dr = cmd.ExecuteReader();
 
@@ -128,6 +128,6 @@ namespace EmployeeInformation
                 });
             dr.Close();
             return employees;
-        } 
+        }
     }
 }

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EmployeeInformation"
         mc:Ignorable="d"
-        Title="Update Employee" Height="250" Width="300">
+        Title="Update Employee" Height="250" Width="350">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>

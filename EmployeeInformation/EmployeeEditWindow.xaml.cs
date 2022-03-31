@@ -6,7 +6,6 @@ namespace EmployeeInformation
     {
         readonly VM vm;
         readonly Employee employee = new Employee();
-
         public EmployeeEditWindow(bool isEdit)
         {
             InitializeComponent();
@@ -30,7 +29,6 @@ namespace EmployeeInformation
             }
             DataContext = employee;
         }
-
         private void Save_Click(object sender, RoutedEventArgs e)
         {
             vm.Save(employee);
